@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Details — MCBA Dallas Golf Invitational</title>
+  <meta name="description" content="Schedule, course notes, and the day-of flow for the MCBA Dallas Golf Invitational." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="MCBA Dallas Golf Invitational Home">
+        <div class="brand-mark" aria-hidden="true">⛳</div>
+        <div>
+          <h1>MCBA Dallas Golf Invitational</h1>
+          <p>Event details • schedule • course</p>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="details.html" style="color:#fff; background: rgba(255,255,255,0.06)">Event Details</a>
+        <a href="pro-shop.html">Registration & Sponsorships</a>
+        <a href="contact.html">Contact / FAQ</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-ghost hamburger" data-menu aria-label="Open menu">Menu</button>
+        <a class="btn" href="pro-shop.html#sponsor">Become a Premium Partner</a>
+        <a class="btn btn-primary" href="pro-shop.html#register">Secure Your Foursome</a>
+      </div>
+    </div>
+
+    <div class="container" data-panel data-open="false" style="display:none; padding-bottom: 14px;">
+      <div class="card">
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="index.html">Home</a>
+          <a class="btn" href="pro-shop.html#register">Register</a>
+          <a class="btn" href="pro-shop.html#sponsor">Sponsorships</a>
+          <a class="btn" href="contact.html">Contact / FAQ</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top: 34px;">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h3>The Course & Itinerary</h3>
+            <p>Designed to move smoothly — so the day feels effortless and the networking feels natural.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="index.html">Back to Home</a>
+            <a class="btn btn-primary" href="pro-shop.html#register">Register</a>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h4>Schedule (sample)</h4>
+            <p style="margin-bottom:12px">Times below are placeholders — swap in final times as needed.</p>
+            <div class="card" style="background: rgba(11,18,32,0.45)">
+              <p><strong>8:00 AM</strong> — Registration & Coffee</p>
+              <p><strong>9:00 AM</strong> — Shotgun Start</p>
+              <p><strong>2:00 PM</strong> — Reception & Awards</p>
+              <p><strong>3:00 PM</strong> — Departures / Private Meetings</p>
+            </div>
+            <p class="small" style="margin-top:10px">We can add "Add to Calendar" buttons once date/location are final.</p>
+          </div>
+
+          <div class="card">
+            <h4>Course notes</h4>
+            <p>
+              A Dallas classic with real heritage — pristine conditions, professional flow, and an atmosphere that feels like
+              a private club day. Expect premium hospitality, respectful pacing, and elevated partner visibility.
+            </p>
+            <hr class="sep" />
+            <div class="badge">Dallas heritage • Golden-hour reception • Premium hospitality</div>
+          </div>
+        </div>
+
+        <div class="section" style="padding-bottom: 0;">
+          <div class="section-title">
+            <div>
+              <h3>What to expect</h3>
+              <p>High-end, minimal friction, and built for executives viewing and converting on mobile.</p>
+            </div>
+          </div>
+          <div class="grid-3">
+            <div class="card"><h4>Fast Check-in</h4><p>Streamlined on-site registration. Clean signage and staff support.</p></div>
+            <div class="card"><h4>Premium Pairings</h4><p>Intentional foursome composition where possible.</p></div>
+            <div class="card"><h4>Partner Visibility</h4><p>Tiered placements that feel upscale — not cluttered.</p></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="small">© <span id="year"></span> MCBA • <a href="pro-shop.html">Registration & Sponsorships</a> • <a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact / FAQ — MCBA Dallas Golf Invitational</title>
+  <meta name="description" content="Contact MCBA about registration, sponsorships, dress code, and event logistics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="MCBA Dallas Golf Invitational Home">
+        <div class="brand-mark" aria-hidden="true">⛳</div>
+        <div>
+          <h1>MCBA Dallas Golf Invitational</h1>
+          <p>Contact / FAQ</p>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="details.html">Event Details</a>
+        <a href="pro-shop.html">Registration & Sponsorships</a>
+        <a href="contact.html" style="color:#fff; background: rgba(255,255,255,0.06)">Contact / FAQ</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="btn btn-ghost hamburger" data-menu aria-label="Open menu">Menu</button>
+        <a class="btn" href="pro-shop.html#sponsor">Become a Premium Partner</a>
+        <a class="btn btn-primary" href="pro-shop.html#register">Secure Your Foursome</a>
+      </div>
+    </div>
+
+    <div class="container" data-panel data-open="false" style="display:none; padding-bottom: 14px;">
+      <div class="card">
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="index.html">Home</a>
+          <a class="btn" href="details.html">Event Details</a>
+          <a class="btn" href="pro-shop.html#register">Register</a>
+          <a class="btn" href="pro-shop.html#sponsor">Sponsorships</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top: 34px;">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h3>Contact</h3>
+            <p>Simple, direct, and handled quickly. Use the form or email the right team.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h4>Inquiry form (placeholder)</h4>
+            <p class="small">This is a static form for now. We can wire it to Formspree, a webhook, HubSpot, or your email provider.</p>
+            <hr class="sep" />
+            <form class="form" onsubmit="event.preventDefault(); alert('Form submission is a placeholder. Tell me where you want inquiries delivered.');">
+              <input class="input" type="text" name="name" placeholder="Name" required />
+              <input class="input" type="email" name="email" placeholder="Email" required />
+              <select class="input" name="topic" required>
+                <option value="" disabled selected>Topic</option>
+                <option>Registration</option>
+                <option>Sponsorship</option>
+                <option>Course / Logistics</option>
+                <option>Press / Media</option>
+              </select>
+              <textarea class="input" name="message" placeholder="Message" required></textarea>
+              <button class="btn btn-primary" type="submit">Send message</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <h4>FAQ</h4>
+            <p><strong>Dress code:</strong> Collared shirts, golf-appropriate attire. Soft spikes recommended.</p>
+            <p><strong>Check-in:</strong> Arrive early to ensure a smooth start.</p>
+            <p><strong>Directions:</strong> Add the course address and link below.</p>
+            <hr class="sep" />
+            <div class="grid-2">
+              <div class="card" style="background: rgba(11,18,32,0.45)">
+                <h4 style="margin-top:0">Registration</h4>
+                <p class="small"><a href="mailto:registration@mcba.example">registration@mcba.example</a></p>
+              </div>
+              <div class="card" style="background: rgba(11,18,32,0.45)">
+                <h4 style="margin-top:0">Partnerships</h4>
+                <p class="small"><a href="mailto:partners@mcba.example">partners@mcba.example</a></p>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top: 14px; background: rgba(11,18,32,0.45)">
+              <h4 style="margin-top:0">Map / Directions (placeholder)</h4>
+              <p class="small">Add the course address and a Google/Apple Maps link here once confirmed.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="small">© <span id="year"></span> MCBA • <a href="pro-shop.html">Registration & Sponsorships</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
