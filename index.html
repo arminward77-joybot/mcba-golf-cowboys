@@ -3,186 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MCBA Dallas Golf Invitational</title>
-  <meta name="description" content="MCBA Dallas Golf Invitational" />
+  <title>MCBA Golf Cowboys</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lustria&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Lustria&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-global.css" />
   <style>
-    :root{
-      --bg: #05070b;
-      --panel: rgba(255,255,255,0.06);
-      --panel2: rgba(255,255,255,0.04);
-      --border: rgba(255,255,255,0.14);
-      --text: rgba(255,255,255,0.88);
-      --muted: rgba(255,255,255,0.70);
-      --accent: #c7a24b;
-      --shadow: 0 30px 80px rgba(0,0,0,0.38);
-      --radius: 18px;
-    }
-    *{ box-sizing: border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(900px 600px at 10% 0%, rgba(199,162,75,0.12), transparent 55%), var(--bg);
-      color: var(--text);
-    }
-    a{ color: inherit; text-decoration: none; }
-
-    .container{ width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-
-    /* Simple placeholder nav */
-    header{
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(5,7,11,0.70);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 14px;
-    }
-    .brand{ display:flex; align-items:center; gap:10px; font-weight: 600; letter-spacing: 0.2px; }
-    .mark{ width:36px; height:36px; border-radius: 12px; display:grid; place-items:center; background: rgba(199,162,75,0.16); border: 1px solid rgba(199,162,75,0.28); }
-    .links{ display:flex; gap: 10px; flex-wrap: wrap; }
-    .pill{ padding: 9px 12px; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10); font-size: 13px; color: rgba(255,255,255,0.85); }
-    .pill.primary{ background: rgba(199,162,75,0.16); border-color: rgba(199,162,75,0.30); }
-    .pill.disabled{ opacity: 0.55; pointer-events:none; }
-
-    /* Hero based on JSON */
-    .hero{
-      min-height: 90vh;
-      padding: 44px 0;
-      display:flex;
-      align-items:center;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.70)),
-        url("assets/hero.jpg") top center/cover no-repeat;
-    }
-    @media (max-width: 980px){ .hero{ min-height: 65vh; } }
-    @media (max-width: 640px){ .hero{ min-height: 75vh; } }
-
-    .hero-inner{
-      width: min(640px, 100%);
-      padding: 18px;
-      margin-right: 35%;
-    }
-    @media (max-width: 980px){ .hero-inner{ margin-right: 10%; } }
-    @media (max-width: 640px){ .hero-inner{ margin-right: 0; text-align:center; } }
-
-    .eyebrow{ text-transform: uppercase; letter-spacing: 0.28em; font-size: 12px; color: rgba(255,255,255,0.82); margin: 0 0 10px; }
-    .divider{ height:2px; width: 37%; background: rgba(199,162,75,0.95); border-radius: 99px; margin: 10px 0 18px; }
-    @media (max-width: 980px){ .divider{ width: 44%; } }
-    @media (max-width: 640px){ .divider{ width: 65%; margin-left:auto; margin-right:auto; } }
-
-    h1{
-      margin: 0 0 16px;
-      font-family: Lustria, ui-serif, Georgia, serif;
-      font-weight: 600;
-      font-size: clamp(3rem, 5vw, 5rem);
-      line-height: 1.05;
-      letter-spacing: 1.5px;
-      word-spacing: 5px;
-    }
-    .lede{ color: rgba(255,255,255,0.76); font-size: 16px; line-height: 1.8; max-width: 52ch; }
-    .actions{ display:flex; gap: 14px; align-items:center; flex-wrap:wrap; margin-top: 18px; }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.22);
-      background: rgba(10,14,20,0.40);
-      color: rgba(255,255,255,0.92);
-      font-size: 13px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    .btn.disabled{ opacity: 0.55; pointer-events:none; }
-
-    .video{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 2px solid rgba(199,162,75,0.85);
-      background: rgba(199,162,75,0.14);
-      color: rgba(255,255,255,0.92);
-      pointer-events:none;
-      opacity: 0.75;
-    }
-    .play{
-      width: 42px;
-      height: 42px;
-      border-radius: 999px;
-      display:grid;
-      place-items:center;
-      background: rgba(255,255,255,0.10);
-      border: 2px solid rgba(255,255,255,0.28);
-      font-weight: 700;
-    }
-
-    /* Quick Service section (structure-only, icons remote) */
-    .quick{
-      background: #0b1020;
-      padding: 0;
-    }
-    .quick-inner{
-      padding: 44px 0;
-    }
-    .quick-bar{
-      margin-top: -70px;
-      background: rgba(0,0,0,0.0);
-    }
-    .quick-card{
-      border-radius: 0;
-      background: rgba(10,14,20,0.35);
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: var(--shadow);
-      padding: 28px;
-    }
-    .quick-grid{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-    @media (max-width: 980px){ .quick-grid{ grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 540px){ .quick-grid{ grid-template-columns: 1fr; } }
-
-    .service{ text-align:center; padding: 10px; }
-    .service img{ width: 54px; height: 54px; object-fit: contain; margin-bottom: 14px; }
-    .service h3{ margin: 6px 0 8px; font-family: Lustria, serif; font-size: 20px; letter-spacing: 1.5px; word-spacing: 5px; }
-    .service p{ margin:0; color: rgba(255,255,255,0.72); line-height: 1.8; }
-
-    footer{ padding: 36px 0 60px; color: rgba(255,255,255,0.55); font-size: 12px; }
+    html{scroll-behavior:smooth}
+    .anchor{scroll-margin-top:96px}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="mark">⛳</div>
-        <div>MCBA Dallas Golf Invitational</div>
-      </div>
-      <nav class="links" aria-label="Primary">
-        <a class="pill disabled" href="#">Event Details</a>
-        <a class="pill disabled" href="#">Sponsorships</a>
-        <a class="pill primary disabled" href="#">Register</a>
-      </nav>
-    </div>
-  </header>
+<!-- shared partials -->
 
-  <main>
-    <!-- HERO SECTION (from JSON) -->
+<!-- header -->
+<header class="site-header">
+  <div class="container inner">
+    <div class="brand">
+      <img src="https://riski.foxcreation.net/clubgolf/wp-content/uploads/sites/5/2022/11/Logo-header123.png" alt="Site logo" />
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#events">Events</a>
+      <a href="#faq">FAQ</a>
+      <a href="#blog">Blog</a>
+      <a href="#member">Member</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="#contact">Contact Us</a>
+  </div>
+</header>
+<main>
+<section id="home" class="anchor">
+<!-- HERO SECTION (from JSON) -->
     <section class="hero" aria-label="Hero">
       <div class="container">
         <div class="hero-inner">
@@ -234,14 +90,227 @@
     </section>
 
     <!-- NOTE: Remaining JSON sections will be added page-by-page as you send them. -->
-  </main>
+</section>
+<section id="about" class="anchor">
+<section class="page-hero">
+      <div class="container">
+        <h1>About Us</h1>
+        <div class="breadcrumb"><a href="#home">Homepage</a> / About Us</div>
+      </div>
+    </section>
+<section class="section white"><div class="container grid-2">
+  <div><img src="https://riski.foxcreation.net/clubgolf/wp-content/uploads/sites/5/2022/11/Aboutus2.jpg" alt="About" style="width:100%;height:auto" /></div>
+  <div>
+    <p class="kicker">About Golfclub</p>
+    <h2 class="h3">Quality Course, Confident Ball</h2>
+    <p class="p" style="margin:0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+    <p class="p" style="margin-top:12px">Cras tincidunt ligula ac enim posuere venenatis. In luctus biben dum nisl, in luctus dolor ultrices volutpat.</p>
+  </div>
+</div></section>
+</section>
+<section id="services" class="anchor">
+<section class="page-hero">
+      <div class="container">
+        <h1>Services</h1>
+        <div class="breadcrumb"><a href="#home">Homepage</a> / Services</div>
+      </div>
+    </section>
+<section class="section"><div class="container" style="text-align:center">
+  <p class="kicker">Our Club</p>
+  <h2 class="h3">A Game For Everyone</h2>
+  <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+</div></section>
+</section>
+<section id="pricing" class="anchor">
+<section class="page-hero">
+      <div class="container">
+        <h1>Pricing</h1>
+        <div class="breadcrumb"><a href="#home">Homepage</a> / Pricing</div>
+      </div>
+    </section>
+<section class="section"><div class="container" style="text-align:center">
+  <p class="kicker">Pricing Plan</p>
+  <h2 class="h3">Course Packages</h2>
+  <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+  <div class="pricing-grid" style="margin-top:26px; text-align:left">
+    <div class="card pricing"><h4>Beginner</h4><div class="price">$20.99 <small>/ Month</small></div>
+      <ul class="features"><li>Unlimited Gold Pass</li><li>24/7 Club House</li><li>25% Discount Event</li><li>Event Pass</li></ul>
+      <a class="btn" href="#" aria-disabled="true">Learn more</a>
+    </div>
+    <div class="card pricing" style="border-top-color: var(--secondary)"><h4>Professional</h4><div class="price">$44.99 <small>/ Month</small></div>
+      <ul class="features"><li>Unlimited Gold Pass</li><li>24/7 Club House</li><li>25% Discount Event</li><li>Event Pass</li></ul>
+      <a class="btn" href="#" aria-disabled="true">Learn more</a>
+    </div>
+    <div class="card pricing"><h4>Expert</h4><div class="price">$79.99 <small>/ Month</small></div>
+      <ul class="features"><li>Unlimited Gold Pass</li><li>24/7 Club House</li><li>25% Discount Event</li><li>Event Pass</li></ul>
+      <a class="btn" href="#" aria-disabled="true">Learn more</a>
+    </div>
+  </div>
+</div></section>
+</section>
+<section id="events" class="anchor">
+<section class="page-hero">
+      <div class="container">
+        <h1>Event & Activity</h1>
+        <div class="breadcrumb"><a href="#home">Homepage</a> / Event & Activity</div>
+      </div>
+    </section>
+<section class="section"><div class="container" style="text-align:center">
+  <p class="kicker">Our Event</p>
+  <h2 class="h3">Event &amp; Activity</h2>
+  <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+</div></section>
+<section class="section white"><div class="container">
+  <div class="event-list">
+    <div class="card event"><div class="datebox"><div class="day">24</div><div class="mon">June</div></div>
+      <div><h4>Woman Day Golf</h4><div class="meta"><div>09:00 am - 17:00 pm</div><div>Green Wood Golf</div></div></div>
+    </div>
+    <div class="card event"><div class="datebox"><div class="day">15</div><div class="mon">July</div></div>
+      <div><h4>Reunited Tour</h4><div class="meta"><div>09:00 am - 17:00 pm</div><div>Green Wood Golf</div></div></div>
+    </div>
+  </div>
+</div></section>
+</section>
+<section id="faq" class="anchor">
+<section class="page-hero">
+      <div class="container">
+        <h1>FAQ</h1>
+        <div class="breadcrumb"><a href="#home">Homepage</a> / FAQ</div>
+      </div>
+    </section>
+<section class="section"><div class="container" style="text-align:center">
+  <p class="kicker">FAQ</p>
+  <h2 class="h3">Popular Question</h2>
+  <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+</div></section>
+<section class="section white"><div class="container faq">
+  <div class="faq-grid">
+    <div>
+      <details><summary>How to change my photo from Admin Dashboard?</summary><p>Placeholder answer.</p></details>
+      <details><summary>How to change my password easily?</summary><p>Placeholder answer.</p></details>
+      <details><summary>How to change my subscription plan using PayPal?</summary><p>Placeholder answer.</p></details>
+    </div>
+    <div>
+      <details><summary>How to change my photo from Admin Dashboard?</summary><p>Placeholder answer.</p></details>
+      <details><summary>How to change my password easily?</summary><p>Placeholder answer.</p></details>
+      <details><summary>How to change my subscription plan using PayPal?</summary><p>Placeholder answer.</p></details>
+    </div>
+  </div>
+  <p style="text-align:center; margin-top:18px">Didn’t find an answer? <a href="#contact">Contact Us</a></p>
+</div></section>
+</section>
+<section id="blog" class="anchor">
+<section class="page-hero">
+      <div class="container">
+        <h1>Blog</h1>
+        <div class="breadcrumb"><a href="#home">Homepage</a> / Blog</div>
+      </div>
+    </section>
+<section class="section"><div class="container" style="text-align:center">
+  <p class="kicker">Blog &amp; News</p>
+  <h2 class="h3">Popular News</h2>
+  <p class="p">Simple placeholder blog listing (no sidebar).</p>
+  <div class="blog-grid" style="margin-top:26px; text-align:left">
+    <article class="card post"><div class="meta">Mar 25, 2026</div><h4>Post title one</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></article>
+    <article class="card post"><div class="meta">Mar 25, 2026</div><h4>Post title two</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></article>
+    <article class="card post"><div class="meta">Mar 25, 2026</div><h4>Post title three</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></article>
+  </div>
+</div></section>
+</section>
+<section id="member" class="anchor">
+<section class="page-hero">
+      <div class="container">
+        <h1>Member</h1>
+        <div class="breadcrumb"><a href="#home">Homepage</a> / Member</div>
+      </div>
+    </section>
+<section class="section"><div class="container" style="text-align:center">
+  <p class="kicker">Featured Member</p>
+  <h2 class="h3">Awesome People Joined Our Membership.</h2>
+  <p class="p">Simple member grid placeholder.</p>
+  <div class="member-grid" style="margin-top:26px; text-align:left">
+    <div class="card member"><img src="https://riski.foxcreation.net/clubgolf/wp-content/uploads/sites/5/2022/11/member1.jpg" alt="Member" /><div class="body"><p class="name">Anabelle Lopez</p><p class="role">Athlete</p></div></div>
+    <div class="card member"><img src="https://riski.foxcreation.net/clubgolf/wp-content/uploads/sites/5/2022/11/member2.jpg" alt="Member" /><div class="body"><p class="name">Aaron Adam</p><p class="role">Athlete</p></div></div>
+    <div class="card member"><img src="https://riski.foxcreation.net/clubgolf/wp-content/uploads/sites/5/2022/11/member3.jpg" alt="Member" /><div class="body"><p class="name">Aldrich Kenta</p><p class="role">Athlete</p></div></div>
+    <div class="card member"><img src="https://riski.foxcreation.net/clubgolf/wp-content/uploads/sites/5/2022/11/member4.jpg" alt="Member" /><div class="body"><p class="name">Kyoto Honda</p><p class="role">Athlete</p></div></div>
+  </div>
+</div></section>
+</section>
+<section id="contact" class="anchor">
+<section class="page-hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <div class="breadcrumb"><a href="#home">Homepage</a> / Contact Us</div>
+      </div>
+    </section>
+<section class="section"><div class="container" style="text-align:center">
+  <p class="kicker">Get In Touch</p>
+  <h2 class="h3">Let’s Talk With Us</h2>
+  <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+</div></section>
+<section class="section white"><div class="container grid-2" style="align-items:start">
+  <div class="card" style="padding:24px">
+    <h3 style="margin-top:0; font-family:Lustria; color:var(--black)">Contact Information</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p><b>Phone:</b> +123-456-789</p>
+    <p><b>Email:</b> support@foxcreation.net</p>
+    <p><b>Address:</b> Jl. Soedirman, Jakarta, Indonesia</p>
+  </div>
+  <div class="card" style="padding:24px">
+    <form class="form" action="#" method="post">
+      <div><label>Your Name</label><input type="text" placeholder="Your Name" required /></div>
+      <div><label>Telephone</label><input type="tel" placeholder="Telephone" required /></div>
+      <div><label>Email</label><input type="email" placeholder="Your Mail" required /></div>
+      <div><label>Message</label><textarea placeholder="Message" required></textarea></div>
+      <button class="btn" type="button" aria-disabled="true">Send Message</button>
+    </form>
+  </div>
+</div></section>
+<section class="section" style="padding:0">
+  <iframe title="Map" style="width:100%;height:360px;border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&output=embed"></iframe>
+</section>
+</section>
+</main>
+<!-- footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="https://riski.foxcreation.net/clubgolf/wp-content/uploads/sites/5/2022/11/Logo-header123.png" alt="Site logo" style="height:48px;width:auto" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
+      </div>
+      <div>
+        <div class="footer-title">Quick Link</div>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Club</a></li>
+          <li><a href="#member">Member</a></li>
+          <li><a href="#blog">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Useful Link</div>
+        <ul class="footer-links">
+          <li><a href="#" aria-disabled="true">Privacy &amp; Policy</a></li>
+          <li><a href="#" aria-disabled="true">Term &amp; Condition</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Subscribe Us!</div>
+        <form class="form" action="#" method="post">
+          <div>
+            <label>Email</label>
+            <input type="email" placeholder="Your Mail" required />
+          </div>
+          <button class="btn" type="button" aria-disabled="true">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="copyright">© 2026 Copyright All rights reserved.</div>
 
-  <footer>
-    <div class="container">© <span id="year"></span> MCBA. All rights reserved.</div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
