@@ -1,0 +1,107 @@
+:root{
+  --primary:#A68F5B;
+  --secondary:#474733;
+  --text:#656565;
+  --white:#FFFFFF;
+  --black:#000000;
+  --altbg:#F0F0F0;
+  --container: 1120px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text); background:var(--white)}
+a{color:inherit}
+.container{width:min(var(--container), calc(100% - 32px)); margin:0 auto;}
+
+/* Header */
+.site-header{background:var(--secondary); color:var(--white);}
+.site-header .inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0;}
+.brand{display:flex; align-items:center; gap:12px;}
+.brand img{height:44px; width:auto; display:block}
+.nav{display:flex; gap:18px; align-items:center; flex-wrap:wrap; justify-content:center;}
+.nav a{font-family:Lustria, serif; font-size:16px; letter-spacing:0.5px; padding:6px 8px; text-decoration:none; color:var(--white);}
+.nav a[aria-disabled="true"]{opacity:.65; pointer-events:none;}
+.header-cta{border:1px solid var(--secondary); background:transparent; color:var(--white); padding:10px 16px; text-transform:uppercase; letter-spacing:.14em; font-size:12px; text-decoration:none;}
+@media (max-width: 860px){
+  .site-header .inner{flex-wrap:wrap}
+  .nav{width:100%; justify-content:flex-start}
+}
+
+/* Page banner */
+.page-hero{padding: 90px 0; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)), url("https://riski.foxcreation.net/clubgolf/wp-content/uploads/sites/5/2022/11/headerpages.jpg") center/cover no-repeat; color:var(--white); text-align:center;}
+.page-hero h1{font-family:Lustria, serif; font-size: clamp(2.2rem, 4vw, 3.2rem); margin:0 0 10px;}
+.breadcrumb{opacity:.9}
+.breadcrumb a{color:var(--white)}
+
+/* Sections */
+.section{padding: 70px 0; background: var(--altbg);}
+.section.white{background: var(--white);}
+.kicker{font-family:"Open Sans", sans-serif; text-transform:uppercase; letter-spacing: .28em; font-size: 12px; color: var(--primary); margin:0 0 10px; font-weight:600;}
+.h3{font-family:Lustria, serif; font-size: clamp(1.6rem, 2.6vw, 2.5rem); color:var(--black); margin: 0 0 14px;}
+.p{max-width: 70ch; margin:0 auto; line-height:1.8}
+.grid-2{display:grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items:center;}
+@media (max-width: 900px){.grid-2{grid-template-columns:1fr}}
+.card{background:var(--white); border:1px solid rgba(0,0,0,.08); box-shadow: 0 18px 45px rgba(0,0,0,.08);}
+
+/* Buttons */
+.btn{display:inline-block; background:var(--primary); color:var(--white); border:1px solid var(--primary); padding: 14px 28px; text-transform:uppercase; letter-spacing:.14em; font-size:12px; text-decoration:none;}
+.btn[aria-disabled="true"]{opacity:.7; pointer-events:none;}
+
+/* Simple footer */
+.site-footer{background:var(--black); color:rgba(255,255,255,.88); padding: 50px 0;}
+.site-footer p{color:rgba(255,255,255,.75); line-height:1.8}
+.footer-grid{display:grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: 28px;}
+@media (max-width: 900px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width: 600px){.footer-grid{grid-template-columns:1fr;}}
+.footer-title{font-family: "Open Sans"; letter-spacing:.18em; text-transform:uppercase; font-size:12px; margin:0 0 12px; color:rgba(255,255,255,.9)}
+.footer-links{list-style:none; padding:0; margin:0; display:grid; gap:8px;}
+.footer-links a{text-decoration:none; color:rgba(255,255,255,.78)}
+.copyright{background:var(--primary); color:rgba(255,255,255,.92); text-align:center; padding: 14px 0; font-size: 12px;}
+
+/* Forms */
+.form{display:grid; gap: 14px;}
+label{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--primary); font-weight:600}
+input,textarea{width:100%; padding: 14px 15px; border:1px solid rgba(0,0,0,.14); background: var(--altbg); font: inherit;}
+textarea{min-height: 140px; resize: vertical;}
+
+/* Pricing */
+.pricing-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch;}
+@media (max-width: 980px){.pricing-grid{grid-template-columns:1fr;}}
+.pricing{padding: 26px; border-top: 5px solid var(--primary);}
+.pricing h4{font-family:Lustria, serif; font-size: 20px; margin: 0 0 10px; color:var(--black)}
+.price{font-family:Lustria, serif; font-size: 42px; color:var(--black); margin: 10px 0;}
+.price small{font-size: 14px; color: var(--text)}
+.features{margin: 14px 0 22px; padding:0; list-style:none; display:grid; gap: 8px;}
+
+/* Events */
+.event-list{display:grid; gap: 18px;}
+.event{display:grid; grid-template-columns: 120px 1fr; gap: 18px; padding: 18px;}
+@media (max-width: 700px){.event{grid-template-columns:1fr}}
+.datebox{background:var(--secondary); color:var(--white); display:grid; place-items:center; padding: 16px; text-align:center;}
+.datebox .day{font-family:Lustria, serif; font-size: 42px; line-height:1}
+.datebox .mon{margin-top:6px; letter-spacing:.18em; text-transform:uppercase; font-size: 12px;}
+.event h4{font-family:Lustria, serif; color:var(--black); margin:0 0 8px;}
+.event .meta{color: var(--text); font-size: 14px; display:grid; gap: 6px;}
+
+/* FAQ */
+.faq-grid{display:grid; grid-template-columns: 1fr 1fr; gap: 18px;}
+@media (max-width: 900px){.faq-grid{grid-template-columns:1fr}}
+.faq details{background:var(--white); border:1px solid rgba(0,0,0,.10); padding: 14px 16px;}
+.faq summary{cursor:pointer; font-family:Lustria, serif; color:var(--black);}
+
+/* Blog */
+.blog-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px;}
+@media (max-width: 980px){.blog-grid{grid-template-columns:1fr}}
+.post{padding: 18px;}
+.post h4{margin: 10px 0; font-family:Lustria, serif; color:var(--black)}
+.post .meta{font-size: 12px; letter-spacing:.12em; text-transform:uppercase; color: var(--primary)}
+
+/* Members */
+.member-grid{display:grid; grid-template-columns: repeat(4, 1fr); gap: 18px;}
+@media (max-width: 1100px){.member-grid{grid-template-columns: repeat(2, 1fr);}}
+@media (max-width: 600px){.member-grid{grid-template-columns:1fr;}}
+.member{overflow:hidden}
+.member img{width:100%; height: 220px; object-fit: cover; display:block;}
+.member .body{padding: 14px 16px; text-align:center;}
+.member .name{font-family:Lustria, serif; color:var(--primary); margin:0 0 6px;}
+.member .role{letter-spacing:.18em; text-transform:uppercase; font-size: 12px; margin:0 0 8px;}
