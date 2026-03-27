@@ -16,7 +16,12 @@
     /* Inline override to ensure header uses brand green */
     .site-header{background: var(--brand-green) !important;}
   </style>
-  </head>
+  <style>
+    /* Force-hide leftover page banners/breadcrumbs that should be removed */
+    .page-hero, .breadcrumb { display: none !important; }
+    #services .kicker, #pricing .kicker, #events .kicker, #faq .kicker { display:none !important; }
+  </style>
+    </head>
 <body>
 <!-- shared partials -->
 
