@@ -123,3 +123,19 @@ textarea{min-height: 140px; resize: vertical;}
 .hero .eyebrow{color:rgba(255,255,255,0.92);}
 .hero h1{font-family:Lustria, serif; color:#fff; margin:0 0 12px;}
 .hero .lede{color:rgba(255,255,255,0.85)}
+
+
+/* Media trio: left image + two stacked right images */
+.media-trio{display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:stretch}
+.media-left img,.media-right img{width:100%; height:100%; object-fit:cover; display:block}
+.media-left{min-height:320px}
+.media-right{display:grid; grid-template-rows: 1fr 1fr; gap:20px}
+
+/* Stat band */
+.stat-band{padding:40px 0}
+.stat-grid{display:grid; grid-template-columns: repeat(4,1fr); gap:20px; align-items:center}
+.stat{background: rgba(0,0,0,0.28); padding:22px; border-radius:8px; text-align:center}
+.stat .num{font-family:Lustria, serif; font-size:32px; color:var(--white);}
+.stat .label{font-size:13px; text-transform:uppercase; letter-spacing:.12em; color:rgba(255,255,255,0.92)}
+@media (max-width:900px){.media-trio{grid-template-columns:1fr;}.media-right{grid-template-rows:1fr 1fr}.stat-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.stat-grid{grid-template-columns:1fr}}
