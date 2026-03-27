@@ -1,11 +1,16 @@
 :root{
-  --primary:#A68F5B;
-  --secondary:#474733;
-  --text:#656565;
-  --white:#FFFFFF;
-  --black:#000000;
-  --altbg:#F0F0F0;
+  /* New brand colors requested by Master Ward */
+  --brand-green: #006747;    /* primary accent */
+  --brand-gold: #B0903D;     /* gold accent */
+  --white: #FFFFFF;
+  --black: #000000;
+  /* Text: default on light surfaces */
+  --text: var(--black);
+  --altbg: #F8F8F6; /* subtle off-white for panels */
   --container: 1120px;
+  /* Backwards-compat aliases used in the stylesheet */
+  --primary: var(--brand-green);
+  --secondary: var(--brand-gold);
 }
 *{box-sizing:border-box}
 html,body{height:100%}
