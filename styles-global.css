@@ -19,7 +19,7 @@ a{color:inherit}
 .container{width:min(var(--container), calc(100% - 32px)); margin:0 auto;}
 
 /* Header */
-.site-header{background:var(--secondary); color:var(--white);}
+.site-header{background:var(--brand-green) !important; color:var(--white);}
 .site-header .inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0;}
 .brand{display:flex; align-items:center; gap:12px;}
 .brand img{height:44px; width:auto; display:block}
