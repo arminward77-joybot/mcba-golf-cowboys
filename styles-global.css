@@ -105,3 +105,16 @@ textarea{min-height: 140px; resize: vertical;}
 .member .body{padding: 14px 16px; text-align:center;}
 .member .name{font-family:Lustria, serif; color:var(--primary); margin:0 0 6px;}
 .member .role{letter-spacing:.18em; text-transform:uppercase; font-size: 12px; margin:0 0 8px;}
+/* Homepage hero using local Cowboys photo */
+.hero{
+  min-height: 90vh;
+  display:flex;
+  align-items:center;
+  padding:44px 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.70)), url("assets/hero.jpg") center/cover no-repeat;
+  color: white;
+}
+.hero .hero-inner{width:min(720px,100%); padding:18px;}
+.hero .eyebrow{color:rgba(255,255,255,0.92);}
+.hero h1{font-family:Lustria, serif; color:#fff; margin:0 0 12px;}
+.hero .lede{color:rgba(255,255,255,0.85)}
