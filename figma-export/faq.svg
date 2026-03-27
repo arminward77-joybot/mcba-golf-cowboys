@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="420">
+  <text x="80" y="48" font-size="28" font-family="Lustria">Popular Question</text>
+  <g font-family="Open Sans, sans-serif" font-size="14">
+    <rect x="80" y="80" width="520" height="60" rx="6" fill="#fff" stroke="#eee"/>
+    <rect x="660" y="80" width="520" height="60" rx="6" fill="#fff" stroke="#eee"/>
+    <rect x="80" y="156" width="520" height="60" rx="6" fill="#fff" stroke="#eee"/>
+    <rect x="660" y="156" width="520" height="60" rx="6" fill="#fff" stroke="#eee"/>
+    <rect x="80" y="232" width="520" height="60" rx="6" fill="#fff" stroke="#eee"/>
+    <rect x="660" y="232" width="520" height="60" rx="6" fill="#fff" stroke="#eee"/>
+  </g>
+</svg>

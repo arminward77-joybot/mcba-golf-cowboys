@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="300">
+  <g font-family="Open Sans, sans-serif">
+    <text x="80" y="48" font-size="28" font-family="Lustria">A Game For Everyone</text>
+    <rect x="80" y="80" width="360" height="160" rx="8" fill="#fff" stroke="#ddd"/>
+    <rect x="520" y="80" width="360" height="160" rx="8" fill="#fff" stroke="#ddd"/>
+    <rect x="960" y="80" width="360" height="160" rx="8" fill="#fff" stroke="#ddd"/>
+  </g>
+</svg>

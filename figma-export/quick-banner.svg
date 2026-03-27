@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="160">
+  <rect width="100%" height="100%" fill="#004d36" opacity="0.95" rx="10"/>
+  <g transform="translate(80,28)" fill="#fff" font-family="Open Sans, sans-serif">
+    <g transform="translate(0,0)"><rect width="120" height="120" fill="#ffffff22" rx="8"/><text x="140" y="36" font-size="18">Golf Course</text><text x="140" y="64" font-size="13" fill="#ffffffcc">Short benefit copy goes here.</text></g>
+    <g transform="translate(360,0)"><rect width="120" height="120" fill="#ffffff22" rx="8"/><text x="140" y="36" font-size="18">Golf Club</text><text x="140" y="64" font-size="13" fill="#ffffffcc">Short benefit copy goes here.</text></g>
+    <g transform="translate(720,0)"><rect width="120" height="120" fill="#ffffff22" rx="8"/><text x="140" y="36" font-size="18">Golf Academy</text><text x="140" y="64" font-size="13" fill="#ffffffcc">Short benefit copy goes here.</text></g>
+    <g transform="translate(1080,0)"><rect width="120" height="120" fill="#ffffff22" rx="8"/><text x="140" y="36" font-size="18">Fitness Center</text><text x="140" y="64" font-size="13" fill="#ffffffcc">Short benefit copy goes here.</text></g>
+  </g>
+</svg>

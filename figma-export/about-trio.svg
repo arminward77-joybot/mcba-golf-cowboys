@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="420">
+  <image href="../assets/couple-golf-cart.jpg" x="40" y="30" width="560" height="360" preserveAspectRatio="xMidYMid slice" />
+  <image href="../assets/cowboys-putting-range.jpg" x="640" y="30" width="360" height="172" preserveAspectRatio="xMidYMid slice" />
+  <image href="../assets/golfer-putting-walking.jpg" x="640" y="218" width="360" height="172" preserveAspectRatio="xMidYMid slice" />
+  <text x="40" y="20" font-size="16" font-family="Open Sans, sans-serif">About ClubGolf</text>
+  <text x="40" y="46" font-size="28" font-family="Lustria">Quality Course, Confident Ball</text>
+</svg>

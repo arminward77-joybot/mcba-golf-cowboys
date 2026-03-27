@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="360">
+  <g>
+    <image href="../assets/hand-on-tee.jpg" x="60" y="40" width="320" height="240" preserveAspectRatio="xMidYMid slice" />
+    <image href="../assets/hat-of-golfer.jpg" x="420" y="40" width="320" height="240" preserveAspectRatio="xMidYMid slice" />
+    <image href="../assets/golfer-putting-walking.jpg" x="780" y="40" width="320" height="240" preserveAspectRatio="xMidYMid slice" />
+    <image href="../assets/couple-golf-cart.jpg" x="1140" y="40" width="240" height="240" preserveAspectRatio="xMidYMid slice" />
+  </g>
+</svg>
